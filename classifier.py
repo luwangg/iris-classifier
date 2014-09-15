@@ -22,11 +22,13 @@ from mpl_toolkits.mplot3d import Axes3D
 from sklearn import datasets
 from sklearn.decomposition import PCA
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn import cross_validation
 
 # import some data to play with
 iris = datasets.load_iris()
-clf = MultinomialNB(alpha=1)
+#clf = MultinomialNB(alpha=1)
+clf = GaussianNB()
 
 # Classifier ...
 for NF in range(1,5):
